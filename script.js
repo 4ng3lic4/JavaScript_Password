@@ -83,7 +83,7 @@ function generatePassword() {
 
 
   //var with the options the user selected
-  var optionsSelected = [numericData];
+  var optionsSelected = [];
 
   //Conditional that pushes  the data https://www.w3schools.com/jsref/jsref_push.asp
 
