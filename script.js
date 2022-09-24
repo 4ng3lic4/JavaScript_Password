@@ -105,12 +105,12 @@ function generatePassword() {
   }
 
   //Function to stop the prompts if user selects NO to everything
-  if (!lowerCase && !upperCase && !numeric && !specialCharacters ){
+  if (!lowerCase && !upperCase && !numeric && !specialCharacters) {
     window.alert("Please select at least one.");
     return
   }
 
-  
+
 
   //We need a variable that will store the string with the password with the added random character
   //to each iteratio of the four loop that iterates however
@@ -119,14 +119,14 @@ function generatePassword() {
   var password = "";
   // We need a random value from the array, therefore we can use Math.random 
   for (var i = 0; i < numOfCharacters; i++) {
-  
+
     //We will pick an item in a random position
     var randomCharacter = pickRandom(optionsSelected)
     var pickedCharacter = pickRandom(randomCharacter)
-password= password+pickedCharacter;
+    password = password + pickedCharacter;
     console.log(pickedCharacter)
   }
-return password
+  return password
 }
 
 
