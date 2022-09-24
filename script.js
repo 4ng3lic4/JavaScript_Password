@@ -80,12 +80,10 @@ function generatePassword() {
   var upperCaseData = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Z", "X", "C", "V", "B", "N", "M"];
   var numericData = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   var specialCharactersData = ["!", "%", "ñ", "$", "&", "@", "*", "+", "Ç", "#"];
-
-
-  //var with the options the user selected
+  //var with the options the user selected, it has to be an empty array
   var optionsSelected = [];
 
-  //Conditional that pushes  the data https://www.w3schools.com/jsref/jsref_push.asp
+  //Conditional that pushes  the data 
 
 
   if (lowerCase === true) {
@@ -113,8 +111,7 @@ function generatePassword() {
 
 
   //We need a variable that will store the string with the password with the added random character
-  //to each iteratio of the four loop that iterates however
-  //many times the password length
+  //to each iteratio of the four loop that iterates 
 
   var password = "";
   // We need a random value from the array, therefore we can use Math.random 
