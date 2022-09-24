@@ -26,22 +26,22 @@ A pop up willdow will appear and the user will have to enter how many characters
 
 STEP 2
 
- A pop up window will prompt the user to choose a length of at least 8 characters and no more than 128 characters
+ If user picks a number less than 8 and higher than 128, a pop-up window will prompt the user to choose a length of at least 8 characters and no more than 128 characters
 ![Step !](./img/9.png)
 
 STEP 3
 
- A pop up window will prompt the user to chose what kind of  character they wish to include in the password (lowercase, uppercase, numeric, and/or special characters)
+ Once the user enters the correct amount, a pop up window will prompt the user to chose what kind of  character they wish to include in the password (lowercase, uppercase, numeric, and/or special characters)
 
 ![Do you want to include lowercase?](./img/3.png) 
 ![Do you want to include uppercase?](./img/4.png) 
 ![Do you want to include numbers?](./img/5.png) 
-![Do you want to include special characters?](./img/7.png) 
+![Do you want to include special characters?](./img/6.png) 
 
-When the user enters their unput, it will be validated and when least one character type is selected and all prompts are answered, then a password that matches the selected criteria will be generated and displayed in an alert.
+When the user enters their input, it will be validated. When at least one character type is selected and all prompts are answered, then a password that matches the selected criteria will be generated and displayed in an alert.
 ![Generate password](./img/8.png) 
 
-In the case that the user provides input that does not correspond to what the prompt is asking, then a text in a dialog box that pops up on the screen will appear requesting the user for the proper input (e.g. The user clicks CANCEL to all the options to generate the password
+In the case that the user provides input that does not correspond to what the prompt is asking, then a text in a dialog box that pops up on the screen will appear requesting the user for the proper input (e.g. User clicks CANCEL to all the options to generate the password
 ![Please select at least one](./img/10.png) 
 
 
