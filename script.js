@@ -36,7 +36,7 @@ function generatePassword() {
     return;
   }
 
-  //We use a boolean statement with a conditional if the number of characters is less than 8, there will be an alert
+  //We use a statement with a conditional if the number of characters is less than 8, there will be an alert
   if (numOfCharacters < 8 || numOfCharacters > 128) {
     window.alert("Password must contain from 8 up to 128 characters");
     //End of function
