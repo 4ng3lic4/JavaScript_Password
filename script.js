@@ -5,9 +5,7 @@
 //We declare a gobal variable
 var generateBtn = document.querySelector("#generate");
 
-
 //We define the function to return integer in and create a new local variable 
-
 function randomInt(min, max) {
   if (!max) {
     max = min;
@@ -17,32 +15,21 @@ function randomInt(min, max) {
   return Math.floor(min * (1 - any) + any * max);
 }
 
-
 //We create a function to get the random position from the list
-
 function pickRandom(CharacterData) {
   return CharacterData[randomInt(0, CharacterData.length)];
-
 }
 
-
-
-
-
-//HEN I click the button to generate a password
+//From the criteria : THEN I click the button to generate a password
 //THEN I am presented with a series of prompts for password criteria
 //Initially, console returns error that generatePassword is not defined, so we need to create the function
+
 function generatePassword() {
+
   //We use the window object to prompt for the length of the password
-  var Info = window.prompt("How many characters do you want your password to have?");
-
-  //console.log(message)
-  var numOfCharacters = parseInt(Info);
-
-  //We use a boolean to deplare if user's input is withing the criteria
-
-  //It returns a string, but we need it to be a number, so we need the parseInt() function that turns string to a number
-
+  var Info = window.prompt("How many characters do you want your password to have?"); //It returns a string, but we need it to be a number, so we need the parseInt() function that turns string to a number
+  var numOfCharacters = parseInt(Info); 
+  //The global NaN property is a value that is Not-A-Number
   if (isNaN(numOfCharacters)) {
     window.alert("Use only numbers please.");
     //We stop the function 
@@ -56,7 +43,7 @@ function generatePassword() {
     return;
   }
 
-  //WHEN asked for character types to include in the password 
+  //Criteria: WHEN asked for character types to include in the password 
   //THEN I confirm whether or not to include lowercase,
 
   //User wants lowercase
@@ -72,10 +59,10 @@ function generatePassword() {
   var specialCharacters = window.confirm("Do you want to use special characters?");
 
 
-  //WHEN I answer each prompt THEN my input should be validated 
+  //Criteria :WHEN I answer each prompt THEN my input should be validated 
   //and at least one character type should be selected
   //After declaring the variables, we put them in an array and weclare a new variable to store the data
-
+ 
   var lowerCaseData = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"];
   var upperCaseData = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Z", "X", "C", "V", "B", "N", "M"];
   var numericData = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -83,9 +70,7 @@ function generatePassword() {
   //var with the options the user selected, it has to be an empty array
   var optionsSelected = [];
 
-  //Conditional that pushes  the data 
-
-
+  //Conditionals that pushes  the data 
   if (lowerCase === true) {
     optionsSelected.push(lowerCaseData);
   }
@@ -102,19 +87,14 @@ function generatePassword() {
     optionsSelected.push(specialCharactersData);
   }
 
-  //Function to stop the prompts if user selects NO to everything
+  //Function to stop the prompts if user selects NO (Cancel) to everything
   if (!lowerCase && !upperCase && !numeric && !specialCharacters) {
     window.alert("Please select at least one.");
     return
   }
 
-
-
   //We need a variable that will store the string with the password with the added random character
-  //to each iteratio of the four loop that iterates 
-
   var password = "";
-  // We need a random value from the array, therefore we can use Math.random 
   for (var i = 0; i < numOfCharacters; i++) {
 
     //We will pick an item in a random position
@@ -126,16 +106,11 @@ function generatePassword() {
   return password
 }
 
-
-
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
